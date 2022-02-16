@@ -1,0 +1,1117 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Search><pages Count="17"><page Index="1"><![CDATA[EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022; 85-101
+
+                              Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada
+                                            Pembangkit Listrik Tenaga Surya
+                         (Plts) Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting
+                                                      Peta  Qgis 3.16
+
+                                                   1
+                        Enno Agdelliano Diniardi , Wahyu Farros Hariyadi , Muhammad Iqbal ,
+                                                                                                  1
+                                                                              1
+                         Moh. Faris Syaifullah , Prayudi Wahyu Dewantara , dan Siti Diah Ayu
+                                                1
+                                                                              1
+                                                                  1*
+                                                         Febriani
+
+                   1 Jurusan TeknikEnergi Terbarukan, Politeknik Negeri Jember, Jalan Mastrip, Sumbersari,
+                                                       Jember, 68121
+                                               *E-mail: siti_diah@polije.ac.id
+
+                                                          Abstrak
+                        Pembangkit Listrik Tenaga Surya (PLTS) terapung adalah peralatan pembangkit listrik yang
+                        mengubah  daya  matahari  menjadi  listrik.  PLTS  sering  juga  disebut  Solar  Cell,  atau  Solar
+                        Photovoltaik. Sistem PLTS terapung ini dipasang di atas perairan waduk atau danau. Energi
+                        surya merupakan salah satu sumber energi terbarukan yang melimpah dan menarik perhatian
+                        peneliti  dalam  beberapa  dekade  terakhir  ini.  Tingginya  polusi  udara  dan  laju  pertumbuhan
+                        konsumsi  energi  mendorong  setiap  negara  untuk  mengoptimalkan  segala  potensi  energi
+                        terbarukan dan optimalisasi pemanfaatan PLTS terapung di daerah Jawa Barat. Berdasarkan
+                        masalah tersebut penelitian ini bertujuan untuk mengoptimalisasi pemanfaatan PLTS terapung
+                        di Jawa Barat dengan menggunkan aplikasi QGIS. Penelitian ini diawali dengan melakukan studi
+                        literatur, identifikasi masalah, penentuan kriteria perencanaan survey potensi, pengolahan data,
+                        hingga  visualisasi  layouting  peta  pada  aplikasi  QGIS.  Berdasarkan  analisis  data  dan  hasil
+                        pemetaan didapatkan di daerah jawa barat yaitu ada 7 waduk yang terletak di daerah Kabupaten
+                        Bogor, Kabupaten Cianjur, Kabupaten Purwakarta, Kabupaten Cimahi, Kabupaten Majalengka,
+                        Kabupaten  Sumedang,  Kabupaten  bandung  barat,  Kabupaten  Kuningan.  Dengan  demikian
+                        digitalisasi  ini  dapat  menjadi  acuan  bagi  pemerintah  untuk  mengoptimalkan  potensi  PLTS
+                        terapung di Jawa Barat.
+
+                        Kata Kunci: PLTS, QGIS 3.16, terapung, inovasi energi, teknologi, energi surya.
+
+
+                  1. PENDAHULUAN
+
+                      Kebutuhan energi listrik pada saat sekarang ini semakin meningkat sehingga berbagai
+                  upaya dilakukan oleh pemerintah ataupun swasta agar kebutuhan energi listrik tersebut dapat
+
+                  terpenuhi.  Energi  merupakan  isu  yang  sangat  krusial  bagi  masyarakat  dunia,  terutama
+                  semenjak terjadinya krisis  minyak dunia pada awal  dan akhir dekade 1970-an dan pada
+
+                  akhirnya  ditutup  dengan  adanya  krisis  minyak  yang  terjadi  baru-baru  ini,  dimana  harga
+                  minyak  melambung  sampai  dengan  lebih  dari  $110/barel  (IPB:  2011).  Dengan  kondisi
+
+
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi        85
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page><page Index="2"><![CDATA[Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada Pembangkit Listrik Tenaga Surya (Plts)
+                   Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting Peta  Qgis 3.16 / Enno Agdelliano
+                   Diniardi, dkk
+
+                  tersebut, saat ini negara-negara di dunia berlomba untuk mencari dan memanfaatkan sumber
+
+                  energi  alternatif  untuk  menjaga  keamanan  ketersediaan  sumber  energinya.  Begitu  juga
+                  Indonesia,  untuk    menjaga    ketahanan    sumber  energinya,  maka  dikeluarkan  keputusan
+
+                  presiden RI No. 5 tahun 2006, tentang kebijakan energi nasional, dimana salah satunya yaitu
+                  penggunaan sumber energi yang dapat diperbaharui seperti biofuel, energi matahari, energi
+
+                  angin, energi gelombang dan arus samudra, dan gheotermal.
+                      Indonesia   berada   di   garis khatulistiwa sehingga potensi energi matahari di Indonesia
+
+                  cukup  tinggi.  Potensi  energi  matahari  rata-rata  yang  dimiliki    Indonesia    adalah    5
+
+                  kWh/m2/hari  (Rumbayan  et  al.,  2012).  Indonesia  juga  sebagai  negara  agraris  dan
+                  kepulauan memiliki banyak sumber air yang tersebar di hampir semua wilayah. Badan air
+
+                  berpotensi untuk dimanfaatkan sebagai tempat instalasi PLTS   terapung dan dapat menjadi
+                  solusi  untuk  mengurangi biaya penghematan lahan dan biaya pembangkit  tenaga listrik.
+
+                  Listrik yang dihasilkan   kemungkinan   akan   lebih besar dari PLTS yang dipasang di atap
+                  karena efek pendinginan dari badan air dengan menggunakan floating solar photovoltaic
+
+                  (FSPV) (Sahu et al., 2016).
+
+                      Waduk Cirata (7,111 hektar), Waduk Jati Luhur (8,300 hektar), Waduk Jati Gede (4,980
+                  hektar), Waduk Saguling (5,600 hektar), Waduk Ciawi (3.080 hektar), Waduk Sukamahi
+
+                  (5,23 hektar), Waduk Darma Kuning (650 hektar) merupakan sebuah waduk terbesar di Jawa
+
+                  Barat  yang memiliki panorama alam  yang sangat  indah dan berpotensi  besar digunakan
+                  PLTS  terapung  [1].  Waduk  tersebut  juga  dimanfaatkan  sebagai  sumber  air  bersih  yang
+
+                  digunakan  untuk  memenuhi  kebutuhan  penduduk  setempat,  bantuan  pompa  untuk
+                  mengantisipasi kehilangan energi di sepanjang pipa distribusi.
+
+                      Waduk Cirata, Waduk Jati Luhur, Waduk Jati Gede, Waduk Saguling, Waduk Darma
+                  Kuning,  Waduk  Saguling,  Waduk  Sukamahi,  Waduk  Ciawi  berpotensi  untuk  dilakukan
+
+                  perencanaan PLTS sistem terapung. PDAM dalam mendistribusikan air memiliki kendala
+
+                  apabila terjadi pemadaman listrik, dikarenakan jika listrik mati otomatis harus menggunakan
+                  genset.  PLTS  terapung    menjadi    solusi    untuk  mengatasi  kendala  yang  terjadi  dengan
+
+                  mensuplai  energi  listrik  yang  dihasilkan  sehingga  tidak  jadi  masalah  lagi  ketika  terjadi
+                  pemadaman listrik pada PDAM. Perencanaan PLTS ini diharapkan dapat mensubstitusi dan
+
+
+
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi        86
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page><page Index="3"><![CDATA[Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada Pembangkit Listrik Tenaga Surya (Plts)
+                   Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting Peta  Qgis 3.16 / Enno Agdelliano
+                   Diniardi, dkk
+
+                  memenuhi kebutuhan pemakaian listrik dan untuk mengurangi pengeluaran  biaya  dalam
+
+                  pemakaian listrik PDAM wilayah Danau di Jawa Barat.
+                      Perencanaan survey perlu dilakukan guna untuk mengetahui wilayah danau di Jawa
+
+                  Barat yang berpotensi tinggi untuk dijadikan PLTS terapung guna mendongkrak sumber
+                  energi  listrik  bersih  bebas  emisi.  Penulis  menggunakan  software  QGIS  3.16  dalam
+
+                  menentukan peta survey lokasi potensi EBT.
+
+
+                  2. METODE PENELITIAN
+
+                      Metode yang dilakukan peneliti dalam tahap perencanaan survey potensi EBT PLTS
+                  terapung,  di  Jawa  Barat  adalah  studi  iteratur,  tahap  persiapan,  tahap  penelitian,  tahap
+
+                  pelaksanaan, dan tahap pengolahan data untuk  menentukan sebaran potensi EBT  bidang
+                  PLTS terapung di provinsi Jawa Barat.
+
+                  2.1 Studi Literatur
+                  A. Pengertian Pembangkit Listrik Tenaga Surya (PLTS) Terapung
+
+                      Pembangkit Listrik Tenaga Surya (PLTS) terapung adalah peralatan pembangkit listrik
+
+                  yang mengubah daya matahari menjadi listrik. PLTS sering juga disebut Solar Cell, atau
+                  Solar  Photovoltaik.  Sistem  PLTS  terapung  ini  dipasang  di  atas  perairan  dengan
+
+                  menggunakan jenis panel surya bifacial (dua sisi) yang pertama kali diterapkan di Indonesia.
+
+                  Penggunaan panel surya bifacial ini diharapkan dapat menghasilkan energi yang lebih besar
+                  karena memiliki dua sisi sel surya yang dapat menerima sinar matahari. Sisi depan panel
+
+                  surya  menerima  sinar  matahari    langsung    sedangkan    sisi  sebaliknya  menerima  sinar
+                  matahari dari pantulan air. Selain bisa diterapkan  di  wilayah  perairan seperti danau dan
+
+                  laut, teknologi  PLTS  terapung  bifacial  ini juga cocok dibangun di  atas dam  dan waduk
+                  seperti dalam rencana pemerintah untuk membangun PLTS Cirata, Jawa Barat.
+
+                      Sistem PLTS terapung ini dipasang di atas perairan dengan menggunakan jenis panel
+
+                  surya bifacial (dua sisi) yang pertama kali diterapkan di Indonesia. Penggunaan panel surya
+                  bifacial ini diharapkan dapat   menghasilkan   energi   yang lebih besar karena memiliki dua
+
+                  sisi sel surya yang dapat menerima sinar matahari. Sisi depan panel surya menerima sinar
+                  matahari langsung sedangkan sisi sebaliknya menerima sinar matahari dari pantulan air.
+
+
+
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi        87
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page><page Index="4"><![CDATA[Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada Pembangkit Listrik Tenaga Surya (Plts)
+                   Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting Peta  Qgis 3.16 / Enno Agdelliano
+                   Diniardi, dkk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            Gambar 1. PLTS Terapung Waduk Cirata
+                  B. Cara Kerja Pembangkit Listrik Tenaga Surya (PLTS) Terapung
+
+                      Secara  struktur  sistem  PLTS  terapung  (Floating  Photovoltaic  System)  sama  dengan
+                  PLTS biasanya (Ground  Photovoltaic  System), semua komponen yang digunakan adalah
+
+                  sama kecuali fondasi  yang digunakan sebagai  penyangga  (lihat  gambar  1  diatas). PLTS
+
+                  terapung tidak menggunakan    fondasi    tetap    dan kaku, tetapi  menggunakan struktur
+                  buoyancy  dan  sistem  mooring. Skema FPS dibagi menjadi dua jenis, yaitu tipe struktural
+
+                  dan  tipe  all  in  on  buoyancy.  Perbedaan  keduanya  terlihat  pada  struktur  apung  yang
+
+                  digunakan.  Tipe  pertama,  memanfaatkan  kerangka  logam    tahan  karat  sebagai  dudukan
+                  modul PV dan modul apung menggunakan tangki yang di dalamnya diisi dengan styrofoam
+
+                  sebagai langkah antisipasi jika tangki mengalami kebocoran.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                          Gambar 2. Sistem Cara Kerja PLTS Terapung
+                  C. Pengertian Software QGIS 3.16
+
+                      Quantum  GIS  atau  lebih  dikenal  dengan  singkatan  QGIS  merupakan  salah  satu
+                  perangkat lunak Sistem Informasi Geografis (SIG) berbasis open source dengan lisensi di
+
+                  bawah GNU General Public License yang dapat dijalankan dalam berbagai sistem operasi.
+
+
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi        88
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page><page Index="5"><![CDATA[Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada Pembangkit Listrik Tenaga Surya (Plts)
+                   Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting Peta  Qgis 3.16 / Enno Agdelliano
+                   Diniardi, dkk
+
+                  QGIS bertujuan untuk menjadi GIS  yang mudah digunakan dengan menyediakan fungsi dan
+
+                  fitur umum. QGIS merupakan proyek dari Open Source Geospatial Foundation (OSGeo)
+                  dimana tujuan awalnya adalah untuk menampilkan data GIS. QGIS dapat  dijalankan  pada
+
+                  Linux (Ubuntu), Unix, Mac OS, Windows dan Android, serta mendukung banyak format dan
+                  fungsionalitas pengolaan data vektor, raster, dan database. Namun, dalam modul ini hanya
+
+                  dijelaskan penggunaan Quantum GIS pada platform Microsoft Windows.
+                      Manfaat  menggunakan software QGIS 3.16 yaitu sebagai berikut :
+
+                      1.  QGIS mendukung standar OGC. Artinya tipe data spasial mengikuti standar terbuka
+
+                         internasional. QGIS dapat membuka layanan WMS, WFS, WCS. QGIS juga dapat
+                         membuka berkas dengan tipe ekstensi csv, geojson, dan geopackage. Malah kalau
+
+                         bisa dikoneksi ke PostGIS, bisa juga langsung baca data spasialnya dari basis data
+                         langsung.
+
+                      2.  QGIS  memiliki  repositori  plugin.  Terdapat  beberapa  plugin  yang  mungkin
+                         membantu operator GIS dalam menjalankan tugasnya  sehari-hari. Kalau tidak ada,
+
+                         bisa buat sendiri.
+
+                      3.  Reporting engine QGIS itu bagus sekali. Kalau Anda mau membuat laporan spasial
+                         (dokumen  PDF  misalnya),  bisa  pakai  QGIS  untuk  membuat  laporan  dengan
+
+                         kartografi yang indah.
+
+                      4.  QGIS punya markup style sendiri  untuk memperindah pembuatan peta. Polygon bisa
+                         diwarnai/diarsir  sesuai  keinginan.  QGIS3  bahkan  nantinya  akan  mendukung
+
+                         rendering peta 3D.
+                      5.  Mudah  dimodifikasi  (menggunakan  Plugin  API)  menggunakan  bahasa
+
+                         pemrograman Python. Python     cukup     mudah dipelajari bagi non- pemrogram.
+                         Bagi pemrogram, ini bisa jadi peluang sebagai konsultan untuk memberi tambahan
+
+                         fungsionalitas ke QGIS dengan mudah.
+
+
+                  2.2  Identifikasi Masalah
+
+                      Pada penelitian sebelumnya, [2] melakukan penelitian “Model Adaptasi Penggunaan
+                  Teknologi  Baru  Pembangkit  Listrik  Tenaga  Surya  (PLTS)  Terapung  di  Indonesia”
+
+                  sebagaimana dapat  dilihat pada Gambar 3. ini  mengumpulkan data penelitian terkait
+
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi        89
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page><page Index="6"><![CDATA[Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada Pembangkit Listrik Tenaga Surya (Plts)
+                   Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting Peta  Qgis 3.16 / Enno Agdelliano
+                   Diniardi, dkk
+
+                  sistem  teknologi  untuk  menaikkan  nilai  guna  dari  PLTS  terapung.  Pengujian
+
+                  karakteristik kurva I-V dan nilai efisiensi dari sel surya tersebut akan digunakan untuk
+                  menentukan tingkat efektivitas dari teknologi sistem pendingin.  Konsep  pembangkit
+
+                  listrik  tenaga surya (PLTS) terapung merupakan salah satu  solusi  untuk  menghadapi
+                  permasalahan    lahan  bagi  pembangkit  listrik  tenaga  surya.  Selain    meminimalkan
+
+                  investasi lahan,  penggunaan  daerah  perairan  seperti danau atau waduk sebagai lokasi
+                  sel  surya  memiliki  keuntungan  lain  yaitu  terhindar  dari  terhalangnya  sinar  matahari
+
+                  karena  umumnya  terbebas  dari  pepohonan  dan  bangunan,  mengurangi  pertumbuhan
+
+                  tanaman liar, serta mendapatkan tambahan pendinginan akibat evaporasi air di bawah sel
+                  surya.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                          Gambar 3. Ilustrasi PLTS Terapung [2]
+                  2.3 Penentuan Kriteria Perencanaan Survey Potensi
+
+                      Kriteria  perencanaan  dalam penelitian  ini  adalah  bentuk  peta yang  berisi  berupa
+
+                  sebaran  energi baru  terbarukan  (EBT)  pada  skala siap pakai dengan mengacu bentuk
+                  asli  simbolik  peta  provinsi  Jawa Barat. Pada perencanaan ini peneliti mengacu pada
+
+                  Software QGIS 3.16 dengan  megacu  pada  luas  waduk yang akan digunakan PLTS
+
+                  terapung  Kriteria  tahap  penelitian  yang  akan  digunakan  adalah  dengan  menentukan
+                  perencanaan sebagai berikut:
+
+                  A.  Tahap Penelitian
+
+                      1.  Mempelajari sebaran potensi EBT bidang PLTS terapung.
+                      2.  Mempelajari literatur jurnal untuk mengetahui perencanaan dalam membangunan
+
+                         Pembangkit Listrik Tenaga Surya (PLTS) terapung.
+
+
+
+
+
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi        90
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page><page Index="7"><![CDATA[Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada Pembangkit Listrik Tenaga Surya (Plts)
+                   Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting Peta  Qgis 3.16 / Enno Agdelliano
+                   Diniardi, dkk
+
+                      3.  Mempelajari     langkah     langkah dalam menggunakan aplikasi QGIS 3.16 dalam
+
+                         membuat peta sebaran EBT bidang PLTS terapung di waduk provinsi Jawa Barat.
+                      4.  Menentukan topik pembahasan dan output yang ingin dihasilkan dari penelitian.
+
+                      5.  Mengumpulkan  data-data  atau parameter-parameter  yang di  perlukan dalam
+                         pelaksanaan penelitian.
+
+
+                  B.  Tahap Pelaksanaan dan Pengolahan Data
+
+                      Pengambilan  data  dengan  melihat  data  langsung  dari  objek  yang  diteliti,  yaitu
+                  melalui pengamatan langsung pada litelatur jurnal kemudian diaplikasikan pada software
+
+                  QGIS 3.16.
+
+                  C.  Pengolahan Data
+
+                      1.  Menghitung  jumlah  waduk  di  Jawa  Barat  yang  berpotensi  digunakan  sebagai
+                         PLTS terapung.
+
+                      2.  Melakukan analisa perencanaan peta dan melakukan survey sebaran EBT pada
+                         PLTS yang disimulasikan pada software QGIS 3.16.
+
+                      3.  Membuat hasil pengamatan pada peta sebaran potensi PLTS terapung di wilayah
+
+                         Jawa Barat dengan menggunakan software QGIS 3.16.
+
+                  3. HASIL DAN PEMBAHASAN
+
+                     1.  Siapkan   data   waduk   yang berpotensi    sebagai    PLTS terapung   yang   berada
+                         di Jawa Barat. Data ini diperoleh dari situs https://ebtke.esdm.go.id/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                               Gambar 4. Tampilan Layar Langkah 1
+
+
+
+
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi        91
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page><page Index="8"><![CDATA[Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada Pembangkit Listrik Tenaga Surya (Plts)
+                   Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting Peta  Qgis 3.16 / Enno Agdelliano
+                   Diniardi, dkk
+
+
+
+                     2.  Buka file INDONESIA_KAB.shp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                               Gambar 5. Tampilan Layar Langkah 2
+                     3.  Next, klik kanan pada Layer INDONESIA_KAB, kemudian pilih Filter, dan lakukan
+
+                         penyaringan data dengan menampilkan peta Jawa Tengah, kemudian klik OK.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                               Gambar 6. Tampilan Layar Langkah 3
+
+                     4.  Next,  klik  peta  Jawa  Barat  daerah  di  layer  INDONESIA_KAB,  pilih  Export,
+
+                         kemudian    pilih    Save Selected Feature As. Pada bagian file name, tentukan lokasi
+                         penyimpanan dan beri nama “Indonesia_Jabar.gpkg”, kemudian klik OK.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                               Gambar 7. Tampilan Layar Langkah 4
+
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi        92
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page><page Index="9"><![CDATA[Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada Pembangkit Listrik Tenaga Surya (Plts)
+                   Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting Peta  Qgis 3.16 / Enno Agdelliano
+                   Diniardi, dkk
+
+                     5.  Next,  terbentuk  layer  Indonesia_Jateng,  selanjutnya  klik  kanan  pada  layer
+
+                         INDONESIA_KAB dan pilih Remove Layer pada peta Jawa Barat, kemudian Export.
+
+
+
+
+
+
+
+
+
+
+
+
+                                               Gambar 8. Tampilan Layar Langkah 5
+
+                     6.  Next, klik pada menu Vector => Geoprocessing Tools => Dissolve => pada bagian
+                         Dissolve field (optional), pilih “Kabupaten” dan klik OK => pada bagian Dissolve,
+
+                         klik titik 3 di sisi kanan kemudian pilih Save to File => tentukan lokasi penyimpanan
+
+                         dan  beri  nama  “Indonesia_Jateng.php”  =>  klik  Save  kemudian  Run  untuk  men-
+                         dissolve.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                               Gambar 9. Tampilan Layar Langkah 6
+
+                     7.  Next,  Setelah  berhasil  melakukan dissolve,  hapus  layer  lama  dengan cara  klik
+
+                         kanan => Remove Layer. Kemudian lakukan visualisasi peta.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                               Gambar 10. Tampilan Layar Langkah 7
+
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi        93
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page><page Index="10"><![CDATA[Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada Pembangkit Listrik Tenaga Surya (Plts)
+                   Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting Peta  Qgis 3.16 / Enno Agdelliano
+                   Diniardi, dkk
+
+                     8.  Next, tambahkan field sesuai data potensi energi yang sudah diperoleh sebelumnya
+
+                         dengan cara klik New Field, kemudian isi nama field dan tipe datanya, dan lengkapi
+                         isi data field nya, kemudian Save.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                               Gambar 11. Tampilan Layar Langkah 8
+
+                     9.  Next,  klik  kanan  pada  layer  Indonesia_Jateng,  kemudian  pilih  Properties  =>
+                         Symbology => Categorized => isi  value dengan “Kabupaten”. Pada bagian  Color
+
+                         Ramp, pilih sesuai selera, misalnya Spectral. Kemudian klik Classify, Apply, dan OK.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                               Gambar 12. Tampilan Layar Langkah 9
+
+                     10.  Next, untuk memunculkan label peta, klik icon Layer Labelling, kemudian ubah No
+                         Labels menjadi Single Labels, pilih value dengan opsi “Kabupaten”.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              Gambar 13. Lampiran Layar Langkah 10
+
+
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi        94
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page><page Index="11"><![CDATA[Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada Pembangkit Listrik Tenaga Surya (Plts)
+                   Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting Peta  Qgis 3.16 / Enno Agdelliano
+                   Diniardi, dkk
+
+
+
+                     11.  Next, aktifkan Draw Text Buffer kemudian klik Apply.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              Gambar 14. Tampilan Layar Langkah 11
+                     12.  Next, bagian value, isilah dengan “Luas” (luas waduk plts terapung). Tentukan warna
+
+                         di bagian color ramp. Kemudian atur Classes dengan angka 2 (untuk 2 warna saja),
+
+                         dan klik Classify. Atur warna di bagian Simbol menjadi kuning (berpotensi PLTS
+                         terapung)  dan  biru  (tidak  berpotensi).  Atur  pula  bagian  Value  dan  Legend-nya,
+
+                         kemudian klik OK.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              Gambar 15. Tampilan Layar Langkah 12
+
+                     13.  Next, tampilannya seperti ini.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              Gambar 16. Tampilan Layar Langkah 13
+
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi        95
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page><page Index="12"><![CDATA[Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada Pembangkit Listrik Tenaga Surya (Plts)
+                   Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting Peta  Qgis 3.16 / Enno Agdelliano
+                   Diniardi, dkk
+
+                     14.  Next,   tambahkan   titik   Centroid dengan   cara   klik   menu   Vector =>Geometry
+
+                         Tools   =>   Centroids => Klik tombol titik 3 di samping kanan Field Centroid =>
+                         Save to File => tentukan lokasi dan beri nama “Centroid_Jabar” => Save => kemudian
+
+                         new print layout.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              Gambar 17. Tampilan Layar Langkah 14
+                     15.  Next, tanda kapasitas potensi biomassa dengan mengatur variasi ukuran Centroid.
+
+                         Klik kanan pada layer Centroid => Properties => Symbology => Graduated. Pada
+
+                         field value, pilih “Kapasitas”. Pada bagian Symbol, tentukan warna yang diinginkan.
+                         Pada bagian Method, ganti dengan “Size”. Pada bagian Classes, isi dengan nilai 3
+
+                         (artinya ada 3 rentang ukuran). Kemudian klik Classify terus Apply terus OK.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              Gambar 18. Tampilan Layar Langkah 15
+
+                     16.  Kemudian  tampilannya  seperti ini.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi        96
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page><page Index="13"><![CDATA[Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada Pembangkit Listrik Tenaga Surya (Plts)
+                   Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting Peta  Qgis 3.16 / Enno Agdelliano
+                   Diniardi, dkk
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              Gambar 19. Tampilan Layar Langkah 16
+
+                     17.  Klik Add Shape kemudian pilih Rectangular. Buatlah kotak untuk peta, kemudian
+                         klik kanan, pilih Item Properties dan beri warna sesuai selera.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              Gambar 20. Tampilan Layar Langkah 17
+
+                     18.  Klik Add Maps, kemudian tambahkan peta di halaman layout. Kemudian klik kanan,
+                         pilih Item Properties. Atur skala peta, border, dan sebagainya. Sesuaikan posisi peta
+
+                         dengan menggunakan tool Move Item Content.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              Gambar 21. Tampilan Layar Langkah 18
+
+                     19.  Klik    icon    Add   Legend,    tentukan  lokasi  untuk  menambahkan  legenda.  Setelah
+
+                         legenda ditampilkan, klik kanan, pilih Item Properties,  kemudian  berikan judul, atur
+                         ukuran font, dan sebagainya.
+
+
+
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi        97
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page><page Index="14"><![CDATA[Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada Pembangkit Listrik Tenaga Surya (Plts)
+                   Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting Peta  Qgis 3.16 / Enno Agdelliano
+                   Diniardi, dkk
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              Gambar 22. Tampilan Layar Langkah 19
+
+                     20.  Klik  icon  Add  Scale,  kemudian tentukan lokasi untuk meletakkan baris skala.
+                         Setelah  skala  mucul,  klik  kanan,  pilih  Item  Properties.  Pada  bagian  Style,  ubah
+
+                         menjadi  bentuk  Numeric.  Selanjutnya  atur  jenis  font,  ukuran,  warna,  dan
+                         justifikasinya.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              Gambar 23. Tampilan Layar Langkah 20
+
+                     21.  Lakukan Langkah untuk menambahkan identitas.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              Gambar 24. Tampilan Layar Langkah 21
+                     22.  Langkah  terakhir  adalah  klik menu Layout, pilih Export to PDF, tentukan   lokasi
+
+                         penyimpanan   dan nama file, kemudian Simpan. Lakukan langkah yang sama untuk
+                         ekspor ke dalam bentuk gambar.
+
+
+
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi        98
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page><page Index="15"><![CDATA[Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada Pembangkit Listrik Tenaga Surya (Plts)
+                   Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting Peta  Qgis 3.16 / Enno Agdelliano
+                   Diniardi, dkk
+
+
+
+
+
+
+
+
+
+
+
+
+                                              Gambar 25. Tampilan Layar Langkah 22
+
+
+                     23.  Hasil tampilan visualisasi layouting peta.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              Gambar 26. Tampilan Layar Langkah 23
+
+                     24.  Analisa dan Pembahasan
+                         Berdasarkan analisis data yang diperoleh dari hasil perencanaan survey diatas pada
+
+                         aplikasi  QGIS  3.16 bahwa sebaran  energi  baru  terbarukan  yang paling berpotensi
+
+                         untuk dijadikan PLTS terapung di wilayah jawa barat dengan analisis yang berpotensi
+                         tinggi dan  analisis  wilayah  yang  berpotensi rendah.
+
+
+                                           Tabel 1. Data Wilayah yang Berpotensi Tinggi
+
+
+                                  Nama              Nama                               Potensi
+                        No                                        Luas waduk
+                                 Wilayah           Waduk                           Pembangkitan
+
+                        1       Purwakarta         Waduk jati     8.300 hektar        187 MW
+                                                   Luhur
+                                Cianjur,
+                        2       Mande,             Waduk          7.111 hektar        145 MW
+                                Bandung
+                                                   Cirata
+                                Barat
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi        99
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page><page Index="16"><![CDATA[Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada Pembangkit Listrik Tenaga Surya (Plts)
+                   Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting Peta  Qgis 3.16 / Enno Agdelliano
+                   Diniardi, dkk
+
+
+                        3       Jati   Gede,       Waduk Jati     4.980 hektar        145 MW
+                                                   Gede
+                                Sumedang
+                        4       Bandung            Waduk          5.600 hektar         90 MW
+                                                   Saguling
+                                Barat
+
+
+                                           Tabel 2. Data Wilayah yang Berpotensi Rendah
+
+
+
+                                No     Nama          Nama          Luas        Potensi
+                                       Wilayah
+                                                                               Pembangkitan
+                                                                   Waduk
+                                                     Waduk
+                                1      Ciawi,        Waduk         3.080             65 MW
+                                                     Ciawi
+                                                                   hektar
+                                       Bogor
+                                2      Kuningan      Waduk         650               17 MW
+                                                     Kuningan      hektar
+                                3      Ciawi,        Waduk         5.23              10 MW
+                                                     Sukamahi
+                                                                   hektar
+                                       Bogor
+
+
+                      Dari hasil analisis diatas dapat diketahui wilayah di Jawa Barat yang berpotensi  tinggi
+                  dan  berpotensi rendah untuk dijadikan sebagai PLTS terapung. Berdasarkan hal tersebut ini
+
+                  dikarenakan beberapa faktor yaitu seperti luas wilayah perairan waduk, kedalaman perairan
+
+                  waduk, lokasi  waduk  yang sangat  sentral  jika tidak diapit  oleh pegunungan, dan habitat
+                  tumbuhan di perairan waduk.
+
+                  4. KESIMPULAN
+                      Berdasarkan  sumber  data  yang  diperoleh  dari  hasil  survey  perencanaan  diatas  pada
+
+                  aplikasi  QGIS  3.16  bahwa  sebaran  EBT  yang  paling  berpotensi  untuk  dijadikan  PLTS
+                  terapung di daerah jawa barat yaitu ada 7 waduk yang terletak di daerah Kabupaten Bogor,
+
+                  Kabupaten  Cianjur,  Kabupaten  Purwakarta,  Kabupaten  Cimahi,  Kabupaten  Majalengka,
+
+                  Kabupaten  Sumedang,  Kabupaten  Bandung  Barat,  Kabupaten  Kuningan.  Waduk  yang
+                  memiliki potensi pembangkitan PLTS terapung terbesar yaitu Waduk Jati Luhur dengan
+
+                  potensi daya pembangkitan 187 MW, Waduk Cirata dengan potensi daya pembangkitan 145
+                  MW,  Waduk  Jati  Gede  dengan  potensi  daya  pembangkitan  145  MW,  Waduk  Saguling
+
+                  dengan  potensi  daya  pembangkitan  90  MW,  Waduk  Ciawi  dengan  potensi  daya
+
+                  pembangkitan 65 MW, Waduk Darma Kuningan dengan potensi daya  pembangkitan 17
+                  MW, Waduk Sukamahi dengan potensi daya pembangkitan 10 MW.
+
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi       100
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page><page Index="17"><![CDATA[Perencanaan Survey Sebaran Potensi Energi Terbarukan Pada Pembangkit Listrik Tenaga Surya (Plts)
+                   Terapung Provinsi Jawa Barat Berbasis Visualisasi Dan Layouting Peta  Qgis 3.16 / Enno Agdelliano
+                   Diniardi, dkk
+
+                  DAFTAR PUSTAKA
+
+                  [1]   https://ebtke.esdm.go.id/
+                  [2]   Widya Nandini, B. S. ”Model Adaptasi Penggunaan Teknologi Baru Pembangkit Listrik
+
+                      Tenaga Surya (PLTS)  Terapung  di  Indonesia”. Vol. 8, No.1, 2021, pp. 7-11.
+                  [3]   Halida Aulia El Islamy, W. D. “Desain Pembangkit Listrik Tenaga Surya Apung untuk
+
+                      Wilayah Kepulauan Selayar, Sulawesi Selatan”. Jurnal Teknik ITS, Vol. 7, No. 2, 2018.
+                      pp. 161-166.
+
+                  [4]   Herwangga  Satria  Permana,  R. H. “Pemanfaatan Waduk Bening/Widas Sebagai
+
+                      Lokasi  Pembangkit  Listrik  Tenaga  Surya  (PLTS)”.  Jurnal  Riset  Rekayasa  Sipil
+                      Universitas Sebelas Maret. 2019. pp. 65-71.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  Jurnal Online Tersedia pada  : https://jurnal.polines.ac.id/index.php/eksergi       101
+                  Copyright © EKSERGI Jurnal Teknik Energi Vol.18 No.1 Januari 2022]]></page></pages></Search>
