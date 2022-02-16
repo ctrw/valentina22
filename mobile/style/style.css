@@ -3142,7 +3142,7 @@ a {
 .phoneBookmark .item{position:relative;width:100%;height:100px;line-height:100px;vertical-align:middle;font-size:15px;color:#aaaaaa;cursor:pointer;}
 .phoneBookmark .item span{margin:0 10px;float:left;display:inline-block;width:20px;}
 .phoneBookmark .item img{height:76px;float:left;margin:12px 0;}
-.phoneBookmark .item .close{position:absolute;cursor:pointer;top:30px;right:10px;width:41px;height:41px;background-position:-402px -429px;background-image: url(phoneIcon/phone_icon.png);background-repeat: no-repeat;}
+.phoneBookmark .item .close{position:absolute;cursor:pointer;top:30px;right:10px;width:41px;height:41px;background-position:-402px -429px;background-image: url(phoneIcon/phone_iconn.png);background-repeat: no-repeat;}
 .phoneBookmark .item .close:hover{background-position:-462px -429px;}
 
 .miniLogo{width:100px;right:0;bottom:0;opacity:0.5;position:absolute;cursor:pointer;z-index:100;}
